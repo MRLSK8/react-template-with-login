@@ -17,19 +17,21 @@ function Facebook() {
   const history = useHistory();
 
   const handleResponseFacebook = (response) => {
-    const data = {
-      userId: response?.userId,
-      userName: response?.name,
-      email: response?.email,
-      picture: response?.picture?.data?.url,
-      token: response.accessToken,
-      expiresIn: response.expiresIn,
-      access_expiration: response.data_access_expiration_time,
-    };
+    if (response.status !== 'unknown') {
+      const data = {
+        userId: response?.userId,
+        userName: response?.name,
+        email: response?.email,
+        picture: response?.picture?.data?.url,
+        token: response.accessToken,
+        expiresIn: response.expiresIn,
+        access_expiration: response.data_access_expiration_time,
+      };
 
-    login(data);
+      login(data);
 
-    history.push('/main');
+      history.push('/main');
+    }
   };
 
   return (
@@ -52,7 +54,7 @@ const Button = styled.button`
   font-size: 14px;
   border: none;
   border-radius: 0.2em;
-  color: #FFF;
+  color: #fff;
   background: linear-gradient(
     ${(props) => props.colors.facebookColorLight},
     ${(props) => props.colors.facebookColor},
