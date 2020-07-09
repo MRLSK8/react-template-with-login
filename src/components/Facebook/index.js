@@ -36,7 +36,7 @@ function Facebook() {
 
   return (
     <FacebookLogin
-      appId='744645719635817'
+      appId='726826908096787'
       fields='name,email,picture'
       callback={handleResponseFacebook}
       render={(renderProps) => (
