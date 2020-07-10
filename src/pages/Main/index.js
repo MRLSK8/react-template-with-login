@@ -1,15 +1,15 @@
 import React from 'react';
 
 import { Container, Title } from './styles';
-import Header from '../../components/Header';
+
+import Layout from '../../layout';
 
 const Main = () => (
-  <>
-    <Header />
+  <Layout>
     <Container>
       <Title>Main page</Title>
     </Container>
-  </>
+  </Layout>
 );
 
 export default Main;

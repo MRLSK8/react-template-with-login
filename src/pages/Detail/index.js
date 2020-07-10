@@ -1,15 +1,15 @@
 import React from 'react';
 
 import { Container, Title } from './styles';
-import Header from '../../components/Header';
+
+import Layout from '../../layout';
 
 const Detail = () => (
-  <>
-    <Header />
+  <Layout>
     <Container>
       <Title>Detail</Title>
     </Container>
-  </>
+  </Layout>
 );
 
 export default Detail;
