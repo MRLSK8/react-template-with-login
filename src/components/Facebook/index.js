@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+import { FaFacebook, FaGoogle } from 'react-icons/fa';
 
 import styled from 'styled-components';
 import Color from 'color';
@@ -41,7 +42,8 @@ function Facebook() {
       callback={handleResponseFacebook}
       render={(renderProps) => (
         <Button onClick={renderProps.onClick} colors={baseColors}>
-          Facebook
+          <FaFacebook className='facebookIcon' />
+          <p>Facebook</p>
         </Button>
       )}
     />
@@ -62,6 +64,14 @@ const Button = styled.button`
   );
   font-family: serif;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .facebookIcon {
+    margin-right: 10px;
+    font-size: 15px;
+  }
 
   &:hover {
     background-color: ${(props) => props.colors.facebookColorDark};

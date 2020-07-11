@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import { FiUser, FiLock, FiEye, FiEyeOff } from 'react-icons/fi';
 
 import {
   Container,
@@ -11,6 +12,7 @@ import {
   ErrorMessage,
   Message,
   SocialMedia,
+  InputWithIcons,
 } from './styles';
 
 import { isAuthenticated } from '../../services/auth';
@@ -34,23 +36,34 @@ const Login = () => {
       <Container>
         <Form onSubmit={handleSubmit(handleOnSubmit)}>
           <Title>Login</Title>
-          <Input
-            name='userName'
-            placeholder='Username'
-            ref={register({ required: true })}
-          />
+          <InputWithIcons>
+            <FiUser className='inputIcon' color='gray' />
+            <Input
+              name='userName'
+              placeholder='Username'
+              ref={register({ required: true })}
+            />
+          </InputWithIcons>
           {errors.userName && (
             <ErrorMessage>
               The field <span>Username</span> is required *
             </ErrorMessage>
           )}
 
-          <Input
-            type='password'
-            name='password'
-            placeholder='Password'
-            ref={register({ required: true })}
-          />
+          {/* 
+            <FiEye />
+            <FiEyeOff /> 
+          */}
+
+          <InputWithIcons>
+            <FiLock className='inputIcon' color='gray' />
+            <Input
+              type='password'
+              name='password'
+              placeholder='Password'
+              ref={register({ required: true })}
+            />
+          </InputWithIcons>
           {errors.password && (
             <ErrorMessage>
               The field <span>Password</span> is required *
