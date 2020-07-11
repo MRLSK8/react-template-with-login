@@ -35,10 +35,10 @@ export const Title = styled.h3`
 export const Input = styled.input`
   margin: 10px 0;
   font-size: 14px;
-  width: 80%;
+  width: 99%;
   outline: none;
   background-color: whitesmoke;
-  padding: 10px 15px;
+  padding: 10px 35px;
   border-radius: 3px;
   box-shadow: 0px 2px rgba(0, 0, 0, 0.2);
   border: none;
@@ -46,7 +46,7 @@ export const Input = styled.input`
 
   &:focus {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
-    width: 82%;
+    width: 100%;
   }
 `;
 
@@ -88,4 +88,19 @@ export const SocialMedia = styled.div`
   display: flex;
   justify-content: space-around;
   width: 80%;
+`;
+
+export const InputWithIcons = styled.div`
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .inputIcon {
+    font-size: 15px;
+    position: absolute;
+    color: red;
+    top: 20px;
+    left: 12px;
+  }
 `;
