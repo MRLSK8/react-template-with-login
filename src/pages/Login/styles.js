@@ -68,7 +68,7 @@ export const Button = styled.button`
 `;
 
 export const ErrorMessage = styled.span`
-  font-size: 14px;
+  font-size: 12px;
   width: 80%;
   color: red;
 

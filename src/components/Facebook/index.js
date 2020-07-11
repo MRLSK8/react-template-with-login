@@ -41,7 +41,7 @@ function Facebook() {
       fields='name,email,picture'
       callback={handleResponseFacebook}
       render={(renderProps) => (
-        <Button onClick={renderProps.onClick} colors={baseColors}>
+        <Button type='button' onClick={renderProps.onClick} colors={baseColors}>
           <FaFacebook className='facebookIcon' />
           <p>Facebook</p>
         </Button>

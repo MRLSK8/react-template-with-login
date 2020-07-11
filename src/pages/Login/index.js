@@ -56,11 +56,6 @@ const Login = () => {
             </ErrorMessage>
           )}
 
-          {/* 
-            
-            <FiEyeOff /> 
-          */}
-
           <InputWithIcons>
             <FiLock className='inputIcon' color='gray' />
             <Input
