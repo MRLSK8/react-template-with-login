@@ -57,7 +57,7 @@ const Login = () => {
             </ErrorMessage>
           )}
 
-          <Button type='submit' />
+          <Button type='submit'>Log in</Button>
 
           <Message>Or login with</Message>
 

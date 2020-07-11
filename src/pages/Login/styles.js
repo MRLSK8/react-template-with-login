@@ -45,11 +45,12 @@ export const Input = styled.input`
   transition: 0.7s;
 
   &:focus {
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.6);
+    width: 82%;
   }
 `;
 
-export const Button = styled.input`
+export const Button = styled.button`
   width: 80%;
   color: white;
   margin: 10px 0;
@@ -57,7 +58,7 @@ export const Button = styled.input`
   border: none;
   cursor: pointer;
   background: linear-gradient(#0ec200, #0a6707);
-  opacity: 0.75;
+  opacity: 0.9;
   font-size: 14px;
   transition: opacity 0.2s;
 
