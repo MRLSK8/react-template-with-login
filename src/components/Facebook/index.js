@@ -41,7 +41,7 @@ function Facebook() {
       callback={handleResponseFacebook}
       render={(renderProps) => (
         <Button onClick={renderProps.onClick} colors={baseColors}>
-          Login with Facebook
+          Facebook
         </Button>
       )}
     />
@@ -49,8 +49,8 @@ function Facebook() {
 }
 
 const Button = styled.button`
-  width: 16em;
-  height: 3em;
+  width: 10em;
+  height: 2.5em;
   font-size: 14px;
   border: none;
   border-radius: 0.2em;
