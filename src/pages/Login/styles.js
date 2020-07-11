@@ -13,6 +13,7 @@ export const Container = styled.div`
 
 export const Form = styled.form`
   width: 55%;
+  max-height: 400px;
   height: 65%;
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 80px 2px rgba(0, 0, 0, 0.4);
@@ -38,7 +39,7 @@ export const Input = styled.input`
   width: 99%;
   outline: none;
   background-color: whitesmoke;
-  padding: 10px 35px;
+  padding: 10px 36px;
   border-radius: 3px;
   box-shadow: 0px 2px rgba(0, 0, 0, 0.2);
   border: none;
@@ -58,7 +59,7 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
   background: linear-gradient(#0ec200, #0a6707);
-  opacity: 0.9;
+  opacity: 0.8;
   font-size: 14px;
   transition: opacity 0.2s;
 
@@ -99,8 +100,15 @@ export const InputWithIcons = styled.div`
   .inputIcon {
     font-size: 15px;
     position: absolute;
-    color: red;
     top: 20px;
     left: 12px;
+  }
+
+  .showPasswordIcon {
+    font-size: 15px;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    cursor: pointer;
   }
 `;

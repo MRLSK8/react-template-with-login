@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { FiUser, FiLock, FiEye, FiEyeOff } from 'react-icons/fi';
@@ -21,11 +21,16 @@ import { login } from '../../services/auth';
 
 const Login = () => {
   const { register, handleSubmit, errors } = useForm();
+  const [isPasswordShowing, setIsPasswordShowing] = useState(false);
   const history = useHistory();
 
   const handleOnSubmit = (data) => {
     login(data);
     history.push('/main', { data });
+  };
+
+  const handleToggleShowPassword = () => {
+    setIsPasswordShowing((prevState) => !prevState);
   };
 
   if (isAuthenticated()) {
@@ -51,18 +56,31 @@ const Login = () => {
           )}
 
           {/* 
-            <FiEye />
+            
             <FiEyeOff /> 
           */}
 
           <InputWithIcons>
             <FiLock className='inputIcon' color='gray' />
             <Input
-              type='password'
+              type={isPasswordShowing ? 'text' : 'password'}
               name='password'
               placeholder='Password'
               ref={register({ required: true })}
             />
+            {isPasswordShowing ? (
+              <FiEyeOff
+                className='showPasswordIcon'
+                color='gray'
+                onClick={handleToggleShowPassword}
+              />
+            ) : (
+              <FiEye
+                className='showPasswordIcon'
+                color='gray'
+                onClick={handleToggleShowPassword}
+              />
+            )}
           </InputWithIcons>
           {errors.password && (
             <ErrorMessage>
