@@ -9,12 +9,21 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 425px) {
+    width: 85%;
+  }
+
+  @media (max-width: 375px) {
+    width: 90%;
+  }
 `;
 
 export const Form = styled.form`
   width: 55%;
   max-height: 400px;
-  height: 65%;
+  max-width: 375px;
+  height: 70%;
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 80px 2px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
@@ -22,6 +31,23 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+    max-width: 600px;
+    width: 73%;
+  }
+
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+  @media (max-width: 425px) {
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  @media (max-width: 375px) {
+    height: 75%;
+  }
 `;
 
 export const Title = styled.h3`
@@ -61,9 +87,18 @@ export const Button = styled.button`
   opacity: 0.8;
   font-size: 14px;
   transition: opacity 0.2s;
-
+  outline: none;
+  
   &:hover {
     opacity: 1;
+  }
+
+  @media (max-width: 425px) {
+    width: 85%;
+  }
+
+  @media (max-width: 375px) {
+    width: 90%;
   }
 `;
 
@@ -90,9 +125,25 @@ export const SocialMedia = styled.div`
   width: 80%;
   height: 2.3em;
 
+  @media (max-width: 425px) {
+    width: 85%;
+  }
+
+  @media (max-width: 375px) {
+    height: 4em;
+    flex-direction: column;
+    margin: 0.5em 0;
+  }
+
   div {
     background: none !important;
     height: 2.6em;
+  }
+
+  @media (max-width: 375px) {
+    div {
+      margin-left: 20px;
+    }
   }
 `;
 
@@ -101,6 +152,14 @@ export const InputWithIcons = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+
+  @media (max-width: 425px) {
+    width: 85%;
+  }
+
+  @media (max-width: 375px) {
+    width: 90%;
+  }
 
   .inputIcon {
     font-size: 15px;

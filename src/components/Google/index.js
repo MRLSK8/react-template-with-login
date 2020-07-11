@@ -37,6 +37,11 @@ function Google() {
 }
 const Text = styled.p`
   padding-right: 35px;
+
+  @media (max-width: 375px) {
+   padding: 0;
+   margin-left: 35px;
+  }
 `;
 
 export default Google;

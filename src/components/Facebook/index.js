@@ -74,6 +74,17 @@ const Button = styled.button`
     font-size: 15px;
   }
 
+  @media (max-width: 375px) {
+    width: 100%;
+    padding: 10px;
+    margin: 1em 0;
+
+    p {
+      margin-left: 50px;
+      font-size: 16px;
+    }
+  }
+
   .facebookIcon {
     margin-left: 15px;
     font-size: 22px;
