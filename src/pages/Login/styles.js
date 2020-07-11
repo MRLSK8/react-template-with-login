@@ -18,7 +18,6 @@ export const Form = styled.form`
   background-color: rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 80px 2px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,6 +88,12 @@ export const SocialMedia = styled.div`
   display: flex;
   justify-content: space-around;
   width: 80%;
+  height: 2.3em;
+
+  div {
+    background: none !important;
+    height: 2.6em;
+  }
 `;
 
 export const InputWithIcons = styled.div`

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
-import { FaFacebook, FaGoogle } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
 
 import styled from 'styled-components';
 import Color from 'color';
@@ -52,7 +52,7 @@ function Facebook() {
 
 const Button = styled.button`
   width: 10em;
-  height: 2.5em;
+  height: 2.7em;
   font-size: 14px;
   border: none;
   border-radius: 0.2em;
@@ -64,17 +64,19 @@ const Button = styled.button`
   );
   font-family: serif;
   cursor: pointer;
+  outline: none;
+
   display: flex;
-  justify-content: center;
   align-items: center;
 
-  .facebookIcon {
-    margin-right: 10px;
+  p {
+    margin-left: 15px;
     font-size: 15px;
   }
 
-  &:hover {
-    background-color: ${(props) => props.colors.facebookColorDark};
+  .facebookIcon {
+    margin-left: 15px;
+    font-size: 22px;
   }
 `;
 

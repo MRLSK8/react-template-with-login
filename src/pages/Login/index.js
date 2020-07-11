@@ -17,6 +17,7 @@ import {
 
 import { isAuthenticated } from '../../services/auth';
 import Facebook from '../../components/Facebook';
+import Google from '../../components/Google';
 import { login } from '../../services/auth';
 
 const Login = () => {
@@ -94,7 +95,7 @@ const Login = () => {
 
           <SocialMedia>
             <Facebook />
-            <Facebook />
+            <Google />
           </SocialMedia>
         </Form>
       </Container>
