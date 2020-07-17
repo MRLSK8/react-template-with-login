@@ -12,9 +12,11 @@ const Header = () => (
 );
 
 const Container = styled.div`
-  width: 80%;
+  width: 100%;
   height: 60px;
   margin: 0 auto;
+
+  background: red;
 
   display: flex;
   justify-content: space-around;
