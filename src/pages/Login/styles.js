@@ -160,6 +160,7 @@ export const Button = styled.button`
   font-weight: bold;
   border-radius: 3px;
   animation: fadeInButton 2s ease;
+  letter-spacing: 1px;
 
   @keyframes fadeInButton {
     from {
