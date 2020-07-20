@@ -1,12 +1,12 @@
 import Color from 'color';
 
 const base = {
-  primary: Color('#7159C1'),
-  secondary: Color('#C62E65'),
-  accent: Color('#FC4A1A'),
-  contrast: Color('#3A3A3A'),
-  background: Color('#f5f5f5'),
-  text: Color('#333'),
+  primary: Color('#56927D'),
+  secondary: Color('#C51C2B'),
+  accent: Color('#3F2938'),
+  contrast: Color('#F70719'),
+  background: Color('#E9E5EB'),
+  text: Color('#A8A2A8'),
 };
 
 const colors = {

@@ -10,7 +10,7 @@ import {
   Input,
   Button,
   ErrorMessage,
-  Message,
+  Subtitle,
   SocialMedia,
   InputWithIcons,
 } from './styles';
@@ -52,7 +52,7 @@ const Login = () => {
           </InputWithIcons>
           {errors.userName && (
             <ErrorMessage>
-              The field <span>Username</span> is required *
+              The field <span>Username</span> is required
             </ErrorMessage>
           )}
 
@@ -80,13 +80,13 @@ const Login = () => {
           </InputWithIcons>
           {errors.password && (
             <ErrorMessage>
-              The field <span>Password</span> is required *
+              The field <span>Password</span> is required
             </ErrorMessage>
           )}
 
           <Button type='submit'>Log in</Button>
 
-          <Message>Or login with</Message>
+          <Subtitle>Or login with</Subtitle>
 
           <SocialMedia>
             <Facebook />
