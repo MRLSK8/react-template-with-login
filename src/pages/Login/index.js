@@ -40,26 +40,26 @@ const Login = () => {
     return (
       <Container>
         <Form onSubmit={handleSubmit(handleOnSubmit)}>
-          <FiUsers size={64} color='#F70719' style={{ marginBottom: '24px' }} />
+          <FiUsers className='logoIcon' color='#F70719' style={{}} />
           <InputWithIcons>
-            <FiUser className='inputIcon' color='#F70719' />
             <Input
               name='userName'
               placeholder='Username'
               ref={register({ required: true })}
             />
+            <FiUser className='inputIcon' color='#F70719' />
             {errors.userName && (
               <ErrorMessage>The field is required</ErrorMessage>
             )}
           </InputWithIcons>
           <InputWithIcons>
-            <FiLock className='inputIcon' color='#F70719' />
             <Input
               type={isPasswordShowing ? 'text' : 'password'}
               name='password'
               placeholder='Password'
               ref={register({ required: true })}
             />
+            <FiLock className='inputIcon' color='#F70719' />
             {isPasswordShowing ? (
               <FiEyeOff
                 className='showPasswordIcon'

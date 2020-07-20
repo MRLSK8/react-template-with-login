@@ -38,6 +38,20 @@ export const Form = styled.form`
   align-items: center;
   justify-content: center;
 
+  @keyframes showForm {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .logoIcon {
+    margin-bottom: 18px;
+    font-size: 64px;
+  }
+
   @media (max-width: 1024px) {
     max-width: 700px;
     width: 75%;
@@ -56,15 +70,6 @@ export const Form = styled.form`
   @media (max-width: 375px) {
     height: 90%;
   }
-
-  @keyframes showForm {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 `;
 
 export const Input = styled.input`
@@ -80,8 +85,12 @@ export const Input = styled.input`
   transition: 0.7s;
 
   &:focus {
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
     width: 100%;
+  }
+
+  &:focus + .inputIcon {
+    opacity: 0.7;
   }
 `;
 
@@ -177,6 +186,7 @@ export const InputWithIcons = styled.div`
     position: absolute;
     top: 20px;
     left: 12px;
+    opacity: 0.4;
   }
 
   .showPasswordIcon {
