@@ -49,7 +49,7 @@ export const Form = styled.form`
 
   @keyframes dropLogo {
     from {
-      transform: translateY(-200%);
+      transform: translateY(-150%);
       opacity: 0;
     }
     to {
@@ -203,6 +203,7 @@ export const InputWithIcons = styled.div`
     top: 20px;
     left: 12px;
     opacity: 0.4;
+    transition: 1s;
   }
 
   .showPasswordIcon {
