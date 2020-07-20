@@ -43,6 +43,7 @@ export const Form = styled.form`
     margin-bottom: 18px;
     font-size: 64px;
     opacity: 0.8;
+    color: ${(props) => props.theme.contrast};
     animation: dropLogo 1s ease-in;
   }
 
@@ -198,6 +199,7 @@ export const InputWithIcons = styled.div`
   .inputIcon {
     font-size: 15px;
     position: absolute;
+    color: ${(props) => props.theme.contrast};
     top: 20px;
     left: 12px;
     opacity: 0.4;

@@ -40,14 +40,14 @@ const Login = () => {
     return (
       <Container>
         <Form onSubmit={handleSubmit(handleOnSubmit)}>
-          <FiUsers className='logoIcon' color='#F70719' style={{}} />
+          <FiUsers className='logoIcon' />
           <InputWithIcons>
             <Input
               name='userName'
               placeholder='Username'
               ref={register({ required: true })}
             />
-            <FiUser className='inputIcon' color='#F70719' />
+            <FiUser className='inputIcon' />
             {errors.userName && (
               <ErrorMessage>The field is required</ErrorMessage>
             )}
