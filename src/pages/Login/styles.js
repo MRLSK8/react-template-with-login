@@ -51,14 +51,6 @@ export const Form = styled.form`
   }
 `;
 
-export const Title = styled.h3`
-  font-size: 32px;
-  color: ${(props) => props.theme.text};
-  font-weight: bold;
-  font-style: oblique;
-  padding-bottom: 14px;
-`;
-
 export const Input = styled.input`
   margin: 10px 0;
   font-size: 14px;

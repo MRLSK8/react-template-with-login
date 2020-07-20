@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { FiUser, FiLock, FiEye, FiEyeOff } from 'react-icons/fi';
+import { FiUser, FiLock, FiEye, FiEyeOff, FiUsers } from 'react-icons/fi';
 
 import {
   Container,
   Form,
-  Title,
   Input,
   Button,
   ErrorMessage,
@@ -41,9 +40,9 @@ const Login = () => {
     return (
       <Container>
         <Form onSubmit={handleSubmit(handleOnSubmit)}>
-          <Title>Login</Title>
+          <FiUsers size={44} color='#F70719' style={{ marginBottom: '24px' }} />
           <InputWithIcons>
-            <FiUser className='inputIcon' color='gray' />
+            <FiUser className='inputIcon' color='#F70719' />
             <Input
               name='userName'
               placeholder='Username'
@@ -55,9 +54,8 @@ const Login = () => {
               The field <span>Username</span> is required
             </ErrorMessage>
           )}
-
           <InputWithIcons>
-            <FiLock className='inputIcon' color='gray' />
+            <FiLock className='inputIcon' color='#F70719' />
             <Input
               type={isPasswordShowing ? 'text' : 'password'}
               name='password'
@@ -83,11 +81,8 @@ const Login = () => {
               The field <span>Password</span> is required
             </ErrorMessage>
           )}
-
           <Button type='submit'>Log in</Button>
-
           <Subtitle>Or login with</Subtitle>
-
           <SocialMedia>
             <Facebook />
             <Google />
