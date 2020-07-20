@@ -59,7 +59,7 @@ const Login = () => {
               placeholder='Password'
               ref={register({ required: true })}
             />
-            <FiLock className='inputIcon' color='#F70719' />
+            <FiLock className='inputIcon' />
             {isPasswordShowing ? (
               <FiEyeOff
                 className='showPasswordIcon'
