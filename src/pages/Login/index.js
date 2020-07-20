@@ -40,7 +40,7 @@ const Login = () => {
     return (
       <Container>
         <Form onSubmit={handleSubmit(handleOnSubmit)}>
-          <FiUsers size={44} color='#F70719' style={{ marginBottom: '24px' }} />
+          <FiUsers size={64} color='#F70719' style={{ marginBottom: '24px' }} />
           <InputWithIcons>
             <FiUser className='inputIcon' color='#F70719' />
             <Input
@@ -48,12 +48,10 @@ const Login = () => {
               placeholder='Username'
               ref={register({ required: true })}
             />
+            {errors.userName && (
+              <ErrorMessage>The field is required</ErrorMessage>
+            )}
           </InputWithIcons>
-          {errors.userName && (
-            <ErrorMessage>
-              The field <span>Username</span> is required
-            </ErrorMessage>
-          )}
           <InputWithIcons>
             <FiLock className='inputIcon' color='#F70719' />
             <Input
@@ -75,12 +73,10 @@ const Login = () => {
                 onClick={handleToggleShowPassword}
               />
             )}
+            {errors.password && (
+              <ErrorMessage>The field is required</ErrorMessage>
+            )}
           </InputWithIcons>
-          {errors.password && (
-            <ErrorMessage>
-              The field <span>Password</span> is required
-            </ErrorMessage>
-          )}
           <Button type='submit'>Log in</Button>
           <Subtitle>Or login with</Subtitle>
           <SocialMedia>

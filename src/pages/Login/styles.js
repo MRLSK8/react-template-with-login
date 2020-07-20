@@ -17,14 +17,18 @@ export const Container = styled.div`
   @media (max-width: 375px) {
     width: 90%;
   }
+
+  @media (max-width: 320px) {
+    width: 95%;
+  }
 `;
 
 export const Form = styled.form`
-  width: 55%;
-  max-height: 400px;
-  max-width: 375px;
-  height: 70%;
-  background-color: ${(props) => props.theme.background};
+  width: 65%;
+  max-width: 450px;
+  height: 75%;
+  max-height: 500px;
+  background-color: whitesmoke;
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 
@@ -34,25 +38,27 @@ export const Form = styled.form`
   justify-content: center;
 
   @media (max-width: 1024px) {
-    max-width: 600px;
-    width: 73%;
+    max-width: 700px;
+    width: 75%;
+    height: 85%;
   }
 
   @media (max-width: 768px) {
     width: 95%;
   }
+
   @media (max-width: 425px) {
     max-width: 1200px;
     width: 100%;
   }
 
   @media (max-width: 375px) {
-    height: 75%;
+    height: 90%;
   }
 `;
 
 export const Input = styled.input`
-  margin: 10px 0;
+  margin: 10px 0 10px 0;
   font-size: 14px;
   width: 99%;
   outline: none;
@@ -73,7 +79,7 @@ export const Button = styled.button`
   width: 80%;
   color: white;
   text-transform: uppercase;
-  margin: 10px 0;
+  margin: 15px 0;
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -85,6 +91,8 @@ export const Button = styled.button`
   font-size: 14px;
   transition: opacity 0.2s;
   outline: none;
+  font-weight: bold;
+  border-radius: 3px;
 
   &:hover {
     opacity: 1;
@@ -103,15 +111,10 @@ export const ErrorMessage = styled.span`
   font-size: 12px;
   width: 80%;
   color: ${(props) => props.theme.secondary};
-
-  & span {
-    font-style: italic;
-    font-weight: bold;
-  }
 `;
 
 export const Subtitle = styled.p`
-  margin: 10px 0;
+  margin: 10px 0 15px 0;
   font-style: italic;
   font-size: 14px;
 `;
@@ -121,6 +124,11 @@ export const SocialMedia = styled.div`
   justify-content: space-around;
   width: 80%;
   height: 2.3em;
+
+  div {
+    background: none !important;
+    height: 2.6em;
+  }
 
   @media (max-width: 425px) {
     width: 85%;
@@ -132,11 +140,6 @@ export const SocialMedia = styled.div`
     margin: 0.5em 0;
   }
 
-  div {
-    background: none !important;
-    height: 2.6em;
-  }
-
   @media (max-width: 375px) {
     div {
       margin-left: 20px;
@@ -146,8 +149,8 @@ export const SocialMedia = styled.div`
 
 export const InputWithIcons = styled.div`
   width: 80%;
-
   display: flex;
+  flex-direction: column;
   justify-content: center;
   position: relative;
 
