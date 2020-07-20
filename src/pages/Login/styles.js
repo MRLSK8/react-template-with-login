@@ -31,6 +31,7 @@ export const Form = styled.form`
   background-color: whitesmoke;
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+  animation: showForm 1s linear;
 
   display: flex;
   flex-direction: column;
@@ -54,6 +55,15 @@ export const Form = styled.form`
 
   @media (max-width: 375px) {
     height: 90%;
+  }
+
+  @keyframes showForm {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 `;
 
@@ -174,6 +184,11 @@ export const InputWithIcons = styled.div`
     position: absolute;
     top: 20px;
     right: 12px;
+    opacity: 0.5;
     cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 `;
