@@ -39,7 +39,7 @@ const Routes = () => (
     <Route path='/login' component={Login} />
     <PrivateRoute path='/main' component={Main} />
     <PrivateRoute path='/detail' component={Detail} />
-    <PrivateRoute path='/styleguide' component={StyleGuide} />
+    <Route path='/styleguide' component={StyleGuide} />
 
     <Redirect from='*' to='/login' />
   </Switch>

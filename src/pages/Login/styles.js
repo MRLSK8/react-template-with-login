@@ -33,6 +33,8 @@ export const Form = styled.form`
   border-radius: 3px;
   animation: fadeInForm 2s linear;
   overflow: hidden;
+  border-top: 15px solid ${(props) => props.theme.contrastLight};
+  border-top-right-radius: 80px;
 
   display: flex;
   flex-direction: column;
@@ -68,11 +70,11 @@ export const Form = styled.form`
   }
 
   div:nth-child(2) {
-    animation: fadeInInputFromRight 1.5s ease;
+    animation: fadeInInputFromRight 2s ease;
   }
 
   div:nth-child(3) {
-    animation: fadeInInputFromLeft 1.5s ease;
+    animation: fadeInInputFromLeft 2s ease;
   }
 
   @keyframes fadeInInputFromLeft {
@@ -151,7 +153,7 @@ export const Button = styled.button`
     ${(props) => props.theme.contrastLight},
     ${(props) => props.theme.contrastDark}
   );
-  opacity: 0.8;
+  opacity: 0.9;
   font-size: 14px;
   transition: opacity 0.2s;
   outline: none;
