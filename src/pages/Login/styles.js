@@ -31,7 +31,7 @@ export const Form = styled.form`
   background-color: whitesmoke;
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  animation: showForm 2s linear;
+  animation: fadeInForm 2s linear;
   overflow: hidden;
 
   display: flex;
@@ -39,30 +39,60 @@ export const Form = styled.form`
   align-items: center;
   justify-content: center;
 
+  @keyframes fadeInForm {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   .logoIcon {
     margin-bottom: 18px;
     font-size: 64px;
     opacity: 0.8;
     color: ${(props) => props.theme.contrast};
-    animation: dropLogo 1s ease-in;
+    animation: fadeInLogo 1.5s ease-in;
+
+    @keyframes fadeInLogo {
+      from {
+        transform: translateY(-150%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   }
 
-  @keyframes dropLogo {
+  div:nth-child(2) {
+    animation: fadeInInputFromRight 1.5s ease;
+  }
+
+  div:nth-child(3) {
+    animation: fadeInInputFromLeft 1.5s ease;
+  }
+
+  @keyframes fadeInInputFromLeft {
     from {
-      transform: translateY(-150%);
+      transform: translateX(-150%);
       opacity: 0;
     }
     to {
-      transform: translateY(0);
+      transform: translateX(0);
       opacity: 1;
     }
   }
 
-  @keyframes showForm {
+  @keyframes fadeInInputFromRight {
     from {
+      transform: translateX(150%);
       opacity: 0;
     }
     to {
+      transform: translateX(0);
       opacity: 1;
     }
   }
@@ -127,6 +157,17 @@ export const Button = styled.button`
   outline: none;
   font-weight: bold;
   border-radius: 3px;
+  animation: fadeInButton 2s ease;
+
+  @keyframes fadeInButton {
+    from {
+      opacity: 0;
+    }
+    to {
+      transform: rotate(360deg);
+      opacity: 1;
+    }
+  }
 
   &:hover {
     opacity: 1;
@@ -188,14 +229,6 @@ export const InputWithIcons = styled.div`
   justify-content: center;
   position: relative;
 
-  @media (max-width: 425px) {
-    width: 85%;
-  }
-
-  @media (max-width: 375px) {
-    width: 90%;
-  }
-
   .inputIcon {
     font-size: 15px;
     position: absolute;
@@ -217,5 +250,13 @@ export const InputWithIcons = styled.div`
     &:hover {
       opacity: 1;
     }
+  }
+
+  @media (max-width: 425px) {
+    width: 85%;
+  }
+
+  @media (max-width: 375px) {
+    width: 90%;
   }
 `;
