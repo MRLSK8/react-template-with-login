@@ -31,12 +31,31 @@ export const Form = styled.form`
   background-color: whitesmoke;
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  animation: showForm 1s linear;
+  animation: showForm 2s linear;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .logoIcon {
+    margin-bottom: 18px;
+    font-size: 64px;
+    opacity: 0.8;
+    animation: dropLogo 1s ease-in;
+  }
+
+  @keyframes dropLogo {
+    from {
+      transform: translateY(-200%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
   @keyframes showForm {
     from {
@@ -45,11 +64,6 @@ export const Form = styled.form`
     to {
       opacity: 1;
     }
-  }
-
-  .logoIcon {
-    margin-bottom: 18px;
-    font-size: 64px;
   }
 
   @media (max-width: 1024px) {
