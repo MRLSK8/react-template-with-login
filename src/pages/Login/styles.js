@@ -31,7 +31,7 @@ export const Form = styled.form`
   background-color: whitesmoke;
   box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
   border-radius: 3px;
-  animation: fadeInForm 2s linear;
+  animation: fadeInForm 1s ease-in-out;
   overflow: hidden;
   border-top: 15px solid ${(props) => props.theme.contrastLight};
   border-top-right-radius: 80px;
@@ -42,11 +42,22 @@ export const Form = styled.form`
   justify-content: center;
 
   @keyframes fadeInForm {
-    from {
-      opacity: 0;
+    0% {
+      opacity: 0.2;
+      transform: translateX(0);
     }
-    to {
+    25% {
+      transform: translateX(5%);
+    }
+    50% {
+      transform: translateX(-5%);
+    }
+    75% {
+      transform: translateX(5%);
+    }
+    100% {
       opacity: 1;
+      transform: translateX(0);
     }
   }
 
